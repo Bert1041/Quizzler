@@ -45,7 +45,7 @@ class _QuizPageState extends State<QuizPage> {
           context: context,
           type: AlertType.warning,
           title: "End of Quiz",
-          desc: "You Scored:""Do you want to play quiz again.",
+          desc:  "Do you want to play quiz again.",
           buttons: [
             DialogButton(
               child: Text(
@@ -53,7 +53,9 @@ class _QuizPageState extends State<QuizPage> {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               //reset the questionNumber,
-              onPressed: () => Navigator.pop(context, quizBrain.reset(),),
+              onPressed: () => Navigator.pop(
+                context,
+              ),
               color: Color.fromRGBO(0, 179, 134, 1.0),
             ),
             DialogButton(
@@ -70,6 +72,7 @@ class _QuizPageState extends State<QuizPage> {
           ],
         ).show();
         //empty out the scoreKeeper.
+        quizBrain.reset();
         scoreKeeper = [];
         //If we've not reached the end, ELSE do the answer checking steps below 👇
       } else {
@@ -89,8 +92,7 @@ class _QuizPageState extends State<QuizPage> {
     });
   }
 
-  //linear progress indicator.
-
+  //linear progress indicator
   @override
   void initState() {
     super.initState();
@@ -148,7 +150,7 @@ class _QuizPageState extends State<QuizPage> {
                 //The user picked true.
                 checkAnswer(true);
                 setState(() {
-                  quizBrain.progressValue += 1.0/24;
+                  quizBrain.progressValue += 1.0 / 20;
                 });
               },
             ),
@@ -170,14 +172,14 @@ class _QuizPageState extends State<QuizPage> {
                 //The user picked false.
                 checkAnswer(false);
                 setState(() {
-                  quizBrain.progressValue += 0.0666666666666;
+                  quizBrain.progressValue += 1.0 / 20;
                 });
               },
             ),
           ),
         ),
         Wrap(
-            children: scoreKeeper,
+          children: scoreKeeper,
         ),
       ],
     );

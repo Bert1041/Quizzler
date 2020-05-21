@@ -5,9 +5,6 @@ class QuizBrain {
   double progressValue = 0;
 
   List<Question> _questionBank = [
-    Question(
-        'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.',
-        false),
     Question('Google was originally called \"Backrub\".', true),
     Question(
         'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.',
@@ -23,7 +20,6 @@ class QuizBrain {
     Question(
         'In some states, it\'s illegal to eat specific foods while walking backwards.',
         true),
-    Question('Cows sleep standing up', true),
     Question('Donald Duck\'s sister is named Donna.', false),
     Question('Twinkies originally had banana filling', true),
     Question('People in Japan eat Kentucky Fried Chicken for Christmas dinner',
@@ -32,9 +28,7 @@ class QuizBrain {
     Question(
         'It\'s illegal in Georgia to eat fried chicken with a knife and fork.',
         true),
-    Question('Some cats are actually allergic to humans', true),
     Question('You can lead a cow down stairs but not up stairs.', false),
-    Question('Approximately one quarter of human bones are in the feet.', true),
     Question('A slug\'s blood is green.', true),
     Question('Buzz Aldrin\'s mother\'s maiden name was \"Moon\".', true),
     Question('It is illegal to pee in the Ocean in Portugal.', true),
